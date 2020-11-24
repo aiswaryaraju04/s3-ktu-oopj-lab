@@ -1,0 +1,26 @@
+###Write a Java program that checks whether a given string is a palindrome or not.
+
+import java.util.*;
+public class palindrome
+{
+    public static void main(String[] args)
+    {
+        String str,rev="";
+        Scanner s = new Scanner(System.in);
+        System.out.println("Please enter the string to check whether it is palindrome or not: ");
+        str=s.nextLine();
+        String str1=str.toLowerCase();
+        // System.out.println(str1);
+         String st1=str1.replaceAll("\\s","");
+        int length = st1.length();
+         for ( int i = length - 1; i >= 0; i-- )
+		    	 
+		    rev = rev + st1.charAt(i);
+   if (st1.equals(rev))
+        System.out.println("The given string "+str+" is Palindrome");
+        
+        else
+        System.out.println("The given string "+str+" is Not a Palindrome");
+        
+    }
+}
