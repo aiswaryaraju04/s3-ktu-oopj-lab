@@ -1,0 +1,40 @@
+Write two Java classes Employee and Engineer. Engineer should inherit from Employee class. Employee class to have two methods display() and calcSalary(). Write a program to display the engineer salary and to display from Employee class using a single object instantiation (i.e., only one object creation is allowed).
+
+import java.util.*;
+class Employee
+{
+    float basicSalary;
+    float dePercentage;
+    float hraPercentage;
+    float grossSalary;
+    
+    void calcSalary()
+    {
+        grossSalary=basicSalary+(dePercentage*basicSalary/100)+(hraPercentage*basicSalary/100);
+    }
+    void display()
+    {
+        System.out.println("The Gross Salary of Engineer is"+grossSalary);
+    }
+}
+    class Engineer extends Employee
+    {}
+
+public class salary
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        Engineer ob=new Engineer();
+        System.out.println("Enter the Basic Salary of the Engineer:");
+        ob.basicSalary=sc.nextFloat();
+        System.out.println("Enter the DA of the Engineer:");
+        ob.dePercentage=sc.nextFloat();
+        System.out.println("Enter the HRA of the Engineer:");
+        ob.hraPercentage=sc.nextFloat();
+        ob.calcSalary();
+        ob.display();
+        
+        
+    }
+}
