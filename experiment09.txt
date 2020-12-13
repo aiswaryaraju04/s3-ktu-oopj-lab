@@ -1,0 +1,32 @@
+Write a Java program that shows the usage of try, catch, throws and finally.
+
+
+import java.util.*;
+public class Exception
+{
+    public static int divide(int first,int second)throws ArithmeticException
+        {
+            return first/second;
+        }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int firstNumber,secondNumber;
+        firstNumber=sc.nextInt();
+        secondNumber=sc.nextInt();
+        try
+        {
+            System.out.println("Result="+ divide(firstNumber,secondNumber));
+            
+        }
+        catch(ArithmeticException e)
+        {
+          System.out.println(e.getMessage());   
+        }
+         
+         finally
+        {
+            System.out.println("Thank You for performing the Arithmetic Operation Division");   
+        }
+    }
+}
